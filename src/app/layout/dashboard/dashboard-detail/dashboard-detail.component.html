@@ -6,7 +6,7 @@
   <div class="pl-5">
     <p class="h2">{{book?.name}}</p>
     <hr>
-    <p class="h4">Author: <a href="">{{author?.name}}</a></p>
+    <p class="h4">Author: <a routerLink="/author/{{author?.id}}">{{author?.name}}</a></p>
     <hr>
     <p class="h4">Description</p>
     <p>{{book?.description}}</p>
