@@ -36,7 +36,7 @@ export class LoginComponent implements OnInit {
           if (res.headers.get('authorization')) {
             this.authService.getAccountByUsername(this.loginForm.get('username').value).subscribe(res2 => {
               localStorage.setItem('token', res.headers.get('authorization'));
-              localStorage.setItem('user', JSON.stringify(res2.data));
+              localStorage.setItem('user', JSON.stringify(res2));
               this.router.navigateByUrl('');
             });
           }

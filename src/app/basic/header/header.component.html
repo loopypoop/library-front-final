@@ -5,7 +5,9 @@
       <a class="p-2 text-dark" href="#">Features</a>
       <a class="p-2 text-dark" href="#">Catalog</a>
     </nav>
-    <a class="btn btn-outline-primary" [routerLink]="'/login'">Sign up</a>
+    <a class="btn btn-outline-primary" *ngIf="!isAuthenticated" [routerLink]="'/login'">Sign up</a>
+<!--    <span *ngIf="isAuthorized"></span>-->
+    <a class="btn btn-outline-danger" *ngIf="isAuthenticated" (click)="logout()">Log out</a>
   </div>
 
 </header>
